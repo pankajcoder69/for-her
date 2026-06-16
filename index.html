@@ -174,15 +174,16 @@
         .back-nav-link-btn:hover { opacity: 1; transform: translateX(-2px); }
 
         .scrollable-body {
-            width: 100%;
-            flex: 1;
-            overflow-y: auto;
-            margin: 8px 0;
-            padding-right: 2px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    margin: 8px 0;
+    padding-right: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+}
 
         .scrollable-body::-webkit-scrollbar { width: 4px; }
         .scrollable-body::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 10px; }
@@ -291,7 +292,17 @@
         .cover-frame img { width: 100%; height: 100%; object-fit: cover; }
 
         /* Dynamic Continuous Counters Dashboard */
-        .counter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; margin: auto 0; }
+        .counter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+    align-items: stretch;
+}
+#p2 {
+    justify-content: flex-start;
+}
         .counter-box { background: white; border-radius: 16px; padding: 12px 4px; border: 1px solid #ffe5ec; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
         .counter-box.wide { grid-column: span 1.5; }
         .counter-val { font-size: 1.35rem; font-weight: 700; color: var(--primary); }
@@ -816,21 +827,38 @@
 
         <div class="timeline-stop">
             <div class="stop-meta">💫 The Day Everything Started</div>
-            <div class="stop-date">January 15, 2026</div>
-            <div class="stop-title">When “Us” Was Born</div>
+            <div class="stop-date">Poush 11, 2082</div>
+            <div class="stop-title">When I fell in love with</div>
             <p style="font-size:0.85rem;">
                 Two people talking normally… not knowing they would become everything to each other.
             </p>
         </div>
-
         <div class="timeline-stop">
-            <div class="stop-meta">📞 Connection Phase</div>
-            <div class="stop-date">Month 1–2</div>
-            <div class="stop-title">Late Nights, Real Feelings</div>
+            <div class="stop-meta">Most special day for me </div>
+            <div class="stop-date">Magh 1, 2082</div>
+            <div class="stop-title">When you and me became "us"</div>
             <p style="font-size:0.85rem;">
-                We started sharing thoughts we never told anyone else.
+                I still remember the night I was the happiest person alive. Remember babe we chatted for about 4 AM that night.
             </p>
         </div>
+
+            <div class="timeline-stop">
+        <div class="stop-meta">🌱 Month 1</div>
+        <div class="stop-date">Early Phase</div>
+        <div class="stop-title">Getting to Know You</div>
+        <p style="font-size:0.85rem;">
+            Simple talks, curiosity, and slowly starting to enjoy each other's presence.
+        </p>
+    </div>
+
+    <div class="timeline-stop">
+        <div class="stop-meta">💬 Month 2</div>
+        <div class="stop-date">Deeper Connection</div>
+        <div class="stop-title">Comfort Begins</div>
+        <p style="font-size:0.85rem;">
+            Conversations became longer, more personal, and more meaningful every day.
+        </p>
+    </div>
 
         <div class="timeline-stop">
             <div class="stop-meta">🌙 Emotional Bond</div>
