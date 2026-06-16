@@ -429,6 +429,95 @@
             0% { transform: scale(1); filter: drop-shadow(0 2px 5px rgba(255,92,138,0.4)); }
             100% { transform: scale(1.12); filter: drop-shadow(0 10px 20px rgba(255,92,138,0.5)); }
         }
+        .flip-card {
+    width: 100%;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* both sides */
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* FRONT */
+.flip-front {
+    background: linear-gradient(135deg, #fff0f3, #ffe5ec);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* TAP ME text */
+.tap-me {
+    font-size: 1rem;
+    font-weight: 800;
+    animation: pulseTap 1.5s infinite;
+}
+
+@keyframes pulseTap {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* BACK */
+.flip-back {
+    background: white;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.flip-back i {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.flip-back span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a4e69;
+}
+.timeline-stop {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s forwards;
+}
+
+.timeline-stop:nth-child(1){ animation-delay: 0.1s; }
+.timeline-stop:nth-child(2){ animation-delay: 0.3s; }
+.timeline-stop:nth-child(3){ animation-delay: 0.5s; }
+.timeline-stop:nth-child(4){ animation-delay: 0.7s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 <body>
@@ -571,22 +660,141 @@
             
             <div class="scrollable-body">
                 <div class="reasons-container">
-                    <div class="reason-card">
-                        <i class="fa-solid fa-face-smile-wink"></i>
-                        <span>Your smile heals my bad days</span>
-                    </div>
-                    <div class="reason-card">
-                        <i class="fa-solid fa-volume-high"></i>
-                        <span>Your voice is my peace</span>
-                    </div>
-                    <div class="reason-card">
-                        <i class="fa-solid fa-face-angry"></i>
-                        <span>Even your anger feels cute</span>
-                    </div>
-                    <div class="reason-card">
-                        <i class="fa-solid fa-shield-cat"></i>
-                        <span>You are my safe place</span>
-                    </div>
+                    <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-face-smile-wink"></i>
+            <span>Your smile heals my bad days</span>
+        </div>
+
+    </div>
+</div>
+                    <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-face-kiss"></i>
+            <span>Your voice is my peace</span>
+        </div>
+
+    </div>
+</div>
+                    <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-face-angry"></i>
+            <span>Even your anger feels cute</span>
+        </div>
+
+    </div>
+</div>
+                     <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-shield-cat"></i>
+            <span>You are my safe place</span>
+        </div>
+
+    </div>
+</div>
+                    <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-heart"></i>
+            <span>You make my ordinary days special</span>
+        </div>
+
+    </div>
+</div>
+
+                  <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-message"></i>
+            <span>Your texts always make me smile</span>
+        </div>
+
+    </div>
+</div>
+
+
+                    <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-star"></i>
+            <span>You inspire me to become better</span>
+        </div>
+
+    </div>
+</div>
+
+
+                     <div class="flip-card" onclick="this.classList.add('flipped')">
+    <div class="flip-inner">
+
+        <!-- FRONT (Tap Me) -->
+        <div class="flip-front">
+            <div class="tap-me">Tap Me ❤️</div>
+        </div>
+
+        <!-- BACK (REAL MESSAGE) -->
+        <div class="flip-back">
+            <i class="fa-solid fa-infinity"></i>
+
+                       <span>You make me feel so important</span>
+        </div>
+
+    </div>
+</div>
+
                 </div>
             </div>
 
@@ -603,34 +811,48 @@
             <h2 class="script-title" style="font-size: 2.4rem;">How It Started</h2>
             
             <div class="scrollable-body">
-                <div class="timeline-track">
-                    <div class="timeline-stop">
-                        <div class="stop-meta">📍 First Chapter</div>
-                        <div class="stop-date">January 15, 2026 ❤️</div>
-                        <div class="stop-title">The Beginning</div>
-                        <p style="font-size:0.85rem;">The day Pankaj and Prakriti officially became us.</p>
-                    </div>
-                    <div class="timeline-stop">
-                        <div class="stop-meta">📞 Midnight Talks</div>
-                        <div class="stop-date">Month 2 ✨</div>
-                        <div class="stop-title">Late Night Calls</div>
-                        <p style="font-size:0.85rem;">Long conversations, endless talks, and getting closer every day.</p>
-                    </div>
-                    <div class="timeline-stop">
-                        <div class="stop-meta">🌸 Safe Space</div>
-                        <div class="stop-date">Month 3-4 🌱</div>
-                        <div class="stop-title">Growing Together</div>
-                        <p style="font-size:0.85rem;">Learning each other's habits, emotions, and dreams.</p>
-                    </div>
-                    <div class="timeline-stop">
-                        <div class="stop-meta">👑 The Milestone</div>
-                        <div class="stop-date">Month 5 🎉</div>
-                        <div class="stop-title">Still My Favorite Person</div>
-                        <p style="font-size:0.85rem;">Five months later and seeing her name still makes me smile.</p>
-                    </div>
-                </div>
-            </div>
 
+    <div class="timeline-track">
+
+        <div class="timeline-stop">
+            <div class="stop-meta">💫 The Day Everything Started</div>
+            <div class="stop-date">January 15, 2026</div>
+            <div class="stop-title">When “Us” Was Born</div>
+            <p style="font-size:0.85rem;">
+                Two people talking normally… not knowing they would become everything to each other.
+            </p>
+        </div>
+
+        <div class="timeline-stop">
+            <div class="stop-meta">📞 Connection Phase</div>
+            <div class="stop-date">Month 1–2</div>
+            <div class="stop-title">Late Nights, Real Feelings</div>
+            <p style="font-size:0.85rem;">
+                We started sharing thoughts we never told anyone else.
+            </p>
+        </div>
+
+        <div class="timeline-stop">
+            <div class="stop-meta">🌙 Emotional Bond</div>
+            <div class="stop-date">Month 3</div>
+            <div class="stop-title">When It Became Real</div>
+            <p style="font-size:0.85rem;">
+                I realized I wasn’t just talking to someone… I was attached.
+            </p>
+        </div>
+
+        <div class="timeline-stop">
+            <div class="stop-meta">❤️ Present</div>
+            <div class="stop-date">Month 5</div>
+            <div class="stop-title">Still My Favorite Person</div>
+            <p style="font-size:0.85rem;">
+                And I still smile when I see your name.
+            </p>
+        </div>
+
+    </div>
+
+</div>
             <button class="action-btn" onclick="vibrateDevice(); openWebsitePage('p5')">
                 View Memory Vault <i class="fa-solid fa-images"></i>
             </button>
@@ -693,7 +915,7 @@
             </div>
 
             <button class="action-btn" onclick="vibrateDevice(); openWebsitePage('p6')" style="background: var(--text-dark);">
-                The Surprise Next <i class="fa-solid fa-gift"></i>
+                Final Message <i class="fa-solid fa-gift"></i>
             </button>
         </div>
 
@@ -702,19 +924,23 @@
                 <button class="back-nav-link-btn" onclick="vibrateDevice(); triggerGoBackNavigation('p6')"><i class="fa-solid fa-arrow-left"></i> Back</button>
             </div>
             
-            <h2 class="script-title" style="font-size: 2.5rem;">A Gift For You</h2>
+            <h2 class="script-title" style="font-size: 2.5rem;">A Message For You</h2>
             
             <div class="scrollable-body" style="justify-content: center; align-items: center;">
                 <div class="surprise-visual-box">
                     <i class="fa-solid fa-wand-magic-sparkles rotating-sparkle-icon"></i>
-                    <h3 style="font-size: 1.05rem; color: var(--primary-dark); font-weight: 700;">The Magic Matrix Box</h3>
+                    <h3 style="font-size: 1.05rem; color: var(--primary-dark); font-weight: 700;">From deep inside my heart</h3>
                     <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; padding: 0 10px;">
-                        I have engineered three entirely random outcomes inside this button. Pressing it rolls a custom heart equation to deliver an exclusive keepsake note.
+                        I have written three small messages for you.
+Each one carries a piece of my heart.
+
+Tap the button and read them one by one…
+slowly, like a story meant only for you.
                     </p>
                 </div>
                 
-                <button class="action-btn" onclick="vibrateDevice(); triggerCinematicSurpriseSequence()" style="width: 95%; height: 58px; font-size: 1.05rem; background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); margin-top: 10px;">
-                    <i class="fa-solid fa-heart-pulse fa-beat"></i> CLICK FOR SURPRISE
+                <button class="action-btn" onclick="vibrateDevice(); revealNextLoveMessage()" style="width: 95%; height: 58px; font-size: 1.05rem; background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); margin-top: 10px;">
+                    <i class="fa-solid fa-heart-pulse fa-beat"></i> Start Reading ❤️
                 </button>
             </div>
             
@@ -774,6 +1000,27 @@
     </audio>
 
     <script>
+        let messageStep = 0;
+        const loveMessages = [
+    {
+        label: "✨ UNLOCKED KEEPSAKE",
+        icon: "fa-solid fa-crown",
+        title: "To My Whole Universe 👑",
+        content: "I love you more than all the stars combined! You've become a huge part of my daily life, and I am so deeply attached to you."
+    },
+    {
+        label: "💖 HEART STORM ACTIVATED",
+        icon: "fa-solid fa-heart-circle-bolt",
+        title: "Mero Maya! 🥰",
+        content: "Sending a million virtual hugs directly to your screen right now. You are stuck with me forever!"
+    },
+    {
+        label: "💭 RANDOM THOUGHT POPUP",
+        icon: "fa-solid fa-feather-pointed",
+        title: "An Overthinker’s Promise 🌸",
+        content: "Even when I overthink, talking to you and hearing your cute little voice always calms my mind instantly. You are my home."
+    }
+];
         // Universal explicit date constraints setup
         const relationshipStartTimestamp = new Date("2026-01-15T00:00:00").getTime();
         const audioTrack = document.getElementById("bgSong");
@@ -940,43 +1187,23 @@
         }
 
         // Randomized Surprise Outcome Generator Matrix Engine
-        function triggerCinematicSurpriseSequence() {
-            const mask = document.getElementById("theaterMask");
-            mask.classList.add("show");
+        function revealNextLoveMessage() {
+    const box = loveMessages[messageStep];
 
-            setTimeout(() => {
-                const rngSurpriseMode = Math.random();
-                
-                const popupLabel = document.getElementById("popupLabel");
-                const popupIcon = document.getElementById("popupIcon");
-                const popupTitle = document.getElementById("popupTitle");
-                const popupContent = document.getElementById("popupContent");
+    document.getElementById("popupLabel").innerText = box.label;
+    document.getElementById("popupIcon").className = box.icon;
+    document.getElementById("popupTitle").innerText = box.title;
+    document.getElementById("popupContent").innerText = box.content;
 
-                if (rngSurpriseMode < 0.33) {
-                    popupLabel.innerText = "✨ UNLOCKED KEEPSAKE";
-                    popupIcon.className = "fa-solid fa-crown";
-                    popupTitle.innerText = "To My Whole Universe 👑";
-                    popupContent.innerText = "I love you more than all the stars combined! You've become a huge part of my daily life, and I am so deeply attached to you.";
-                    launchConfettiBlastEffect(80);
-                } else if (rngSurpriseMode < 0.66) {
-                    popupLabel.innerText = "💖 HEART STORM ACTIVATED";
-                    popupIcon.className = "fa-solid fa-heart-circle-bolt";
-                    popupTitle.innerText = "Mero Maya! 🥰";
-                    popupContent.innerText = "Sending a million virtual hugs directly to your screen right now. You are stuck with me forever!";
-                    launchConfettiBlastEffect(150);
-                    setTimeout(() => { launchConfettiBlastEffect(100); }, 200);
-                } else {
-                    popupLabel.innerText = "💭 RANDOM THOUGHT POPUP";
-                    popupIcon.className = "fa-solid fa-feather-pointed";
-                    popupTitle.innerText = "An Overthinker's Promise 🌸";
-                    popupContent.innerText = "Even when I overthink, talking to you and hearing your cute little voice always calms my mind instantly. You are my home.";
-                    launchConfettiBlastEffect(60);
-                }
-                
-                document.getElementById("surpriseModal").classList.add("show");
-                document.getElementById("p6-next-btn").style.display = "flex";
-            }, 500);
-        }
+    document.getElementById("surpriseModal").classList.add("show");
+
+    messageStep++;
+
+    // After last message, show final button
+    if (messageStep >= loveMessages.length) {
+        document.getElementById("p6-next-btn").style.display = "flex";
+    }
+}
 
         function closeSurprisePopupCardModal() {
             document.getElementById("surpriseModal").classList.remove("show");
