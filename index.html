@@ -273,6 +273,19 @@
             box-shadow: 0 12px 30px rgba(255, 92, 138, 0.45);
         }
 
+        .heart-message-video{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin:10px 0;
+}
+
+.heart-message-video video{
+    width:240px;
+    height:150px;
+    object-fit:cover;
+    border-radius:20px;
+}
         .action-btn:active { transform: scale(0.96); }
 
         /* Cover Art Box Welcome Screen Frame */
@@ -493,6 +506,21 @@
     100% { transform: scale(1); opacity: 0.8; }
 }
 
+.heart-video{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:12px;
+    margin-bottom:8px;
+}
+
+.heart-video video{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 4px 15px rgba(255,92,138,0.15);
+}
 /* BACK */
 .flip-back {
     background: white;
@@ -618,6 +646,7 @@
                         <div class="counter-lbl">Seconds</div>
                     </div>
                 </div>
+    
 
                 <div class="live-tracker-context-banner">
                     <i class="fa-solid fa-hourglass-high" style="color: var(--primary); font-size: 1.2rem; margin-bottom: 6px; animation: heartPulse 2s infinite alternate;"></i>
@@ -626,6 +655,11 @@
                         Time flies when I'm talking to my favorite person. Five beautiful months down, a lifetime of memories left to collect.
                     </p>
                 </div>
+                <div class="heart-video">
+    <video autoplay muted loop playsinline>
+        <source src="heart.mp4" type="video/mp4">
+    </video>
+</div>
             </div>
 
             <button class="action-btn" onclick="vibrateDevice(); openWebsitePage('p3')">
@@ -966,7 +1000,12 @@ Tap the button and read them one by one…
 slowly, like a story meant only for you.
                     </p>
                 </div>
-                
+                <div class="heart-message-video">
+    <video autoplay muted loop playsinline>
+        <source src="love.mp4" type="video/mp4">
+    </video>
+</div>
+
                 <button class="action-btn" onclick="vibrateDevice(); revealNextLoveMessage()" style="width: 95%; height: 58px; font-size: 1.05rem; background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); margin-top: 10px;">
                     <i class="fa-solid fa-heart-pulse fa-beat"></i> Start Reading ❤️
                 </button>
@@ -1234,10 +1273,20 @@ slowly, like a story meant only for you.
 }
 
         function closeSurprisePopupCardModal() {
-            document.getElementById("surpriseModal").classList.remove("show");
-            document.getElementById("theaterMask").classList.remove("show");
-            closeZoomImage();
+    document.getElementById("surpriseModal").classList.remove("show");
+    document.getElementById("theaterMask").classList.remove("show");
+    closeZoomImage();
+
+    // 🔥 AUTO NEXT MESSAGE LOGIC
+    setTimeout(() => {
+        if (messageStep < loveMessages.length) {
+            revealNextLoveMessage();
+        } else {
+            // final cleanup after last message
+            document.getElementById("p6-next-btn").style.display = "flex";
         }
+    }, 300);
+}
 
         // Final Climax Typewriter Pipeline Mechanics
         const continuousClimaxLetterString = "If I have to choose again, I’ll still choose you without a second thought. These five months are just the beginning of our beautiful story. Thank you for being you, Prakriti. I promise to stand by you, care for you, and love you more with each passing second. Happy 5 Months, my beautiful girl. ❤️";
