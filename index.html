@@ -1685,7 +1685,7 @@ slowly, like a story meant only for you.
 
             // Trigger music loop precisely at 35 seconds mark sequence safely
             if (!audioInitialized) {
-                audioTrack.currentTime = 35;
+                audioTrack.currentTime = 3;
                 audioTrack.play().then(() => {
                     document.getElementById("musicSpinner").style.animationPlayState = "running";
                     document.getElementById("musicStatus").innerText = "Playing: Baby.mp3 ♪";
