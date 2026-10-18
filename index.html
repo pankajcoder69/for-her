@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pankaj ❤️ Prakriti | Our 5 Month Journey</title>
+    <title>Pankaj ❤️ Prakriti | Our 9 Month Journey</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
     <style>
+        
         :root {
             --primary: #ff5c8a;
             --primary-dark: #e03a6c;
@@ -557,6 +560,328 @@
         transform: translateY(0);
     }
 }
+
+
+
+
+/* ==========================================
+   PAGE 3 — NINE-MONTH ROMANTIC LOVE LETTER
+   Scoped to #p3 so other pages stay unchanged
+   ========================================== */
+
+#p3 {
+    --p3-rose: #ff8fb1;
+    --p3-cream: #fff4f6;
+    --p3-ink: #411b35;
+
+    background:
+        radial-gradient(ellipse at top, #6b2450 0%, #35132f 48%, #170d22 100%) !important;
+    color: var(--p3-cream) !important;
+    border: 1px solid #ffffff20;
+    box-shadow: 0 18px 55px #09071355;
+}
+
+/* Heading and subtitle */
+#p3 h1,
+#p3 .page-title,
+#p3 .title {
+    font-family: 'Dancing Script', cursive !important;
+    color: #fff5f8 !important;
+    text-shadow: 0 0 30px #ff78a866;
+}
+
+#p3 .subtitle {
+    display: block;
+    margin: 10px 0 20px;
+    color: #f8ccdd !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.08rem;
+    text-align: center;
+}
+
+/* Main scrolling area */
+#p3 .scrollable-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px !important;
+    width: 100%;
+    padding: 8px 5px 24px;
+    overflow-y: auto;
+    scrollbar-color: #d879a0 #35132f;
+    scrollbar-width: thin;
+}
+
+/* Letter container */
+#p3 .p3-love-letter {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    padding: 4px 2px 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Each paragraph becomes a glass-style letter card */
+#p3 .p3-love-letter > p {
+    position: relative;
+    width: 100%;
+    margin: 0 !important;
+    padding: clamp(18px, 4vw, 27px) !important;
+
+    border: 1px solid #ffffff20 !important;
+    border-left: 4px solid #ff91b5 !important;
+    border-radius: 19px !important;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff12,
+        #ffffff05
+    ) !important;
+
+    box-shadow: 0 12px 30px #09071330 !important;
+    backdrop-filter: blur(8px);
+
+    color: #fff0f5 !important;
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: clamp(14px, 2.5vw, 16px) !important;
+    font-weight: 500 !important;
+    line-height: 1.95 !important;
+    letter-spacing: 0.05px;
+    text-align: left !important;
+
+    overflow-wrap: anywhere;
+    white-space: normal;
+
+    opacity: 0;
+    animation: p3CardRise 0.65s ease forwards;
+    animation-delay: 80ms;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Alternating card accents and fonts */
+#p3 .p3-love-letter > p:nth-child(5n+1) {
+    border-left-color: #ff91b5 !important;
+}
+
+#p3 .p3-love-letter > p:nth-child(5n+2) {
+    border-left-color: #d7a8ff !important;
+    background: linear-gradient(135deg, #c38bff15, #ffffff05) !important;
+    font-family: 'Playfair Display', serif !important;
+    line-height: 1.9 !important;
+}
+
+#p3 .p3-love-letter > p:nth-child(5n+3) {
+    border-left-color: #ffc978 !important;
+    font-family: 'Caveat', cursive !important;
+    font-size: clamp(19px, 3.4vw, 25px) !important;
+    line-height: 1.65 !important;
+}
+
+#p3 .p3-love-letter > p:nth-child(5n+4) {
+    border-left-color: #8fe6dc !important;
+    background: linear-gradient(135deg, #8fe6dc12, #ffffff05) !important;
+    font-family: 'DM Serif Display', serif !important;
+    line-height: 1.8 !important;
+}
+
+#p3 .p3-love-letter > p:nth-child(5n) {
+    border-left-color: #ffb4ee !important;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: clamp(20px, 3.5vw, 27px) !important;
+    line-height: 1.7 !important;
+}
+
+/* Emphasized text */
+#p3 .p3-love-letter strong {
+    color: #ffd0e1 !important;
+    font-weight: 700;
+}
+
+/* First and final paragraphs */
+#p3 .p3-love-letter > p:first-child,
+#p3 .p3-love-letter > p:last-child {
+    text-align: center !important;
+    border: 1px solid #ff9ecf88 !important;
+    border-radius: 22px !important;
+    background: linear-gradient(
+        135deg,
+        #ff8fb126,
+        #9c63e622
+    ) !important;
+    box-shadow: 0 0 34px #ff83b51c !important;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: clamp(23px, 4vw, 31px) !important;
+    line-height: 1.7 !important;
+}
+
+/* Special quote cards — select specific paragraphs by adding a class
+   to the original paragraph if you want precise control. */
+#p3 .p3-love-letter > p:nth-child(4),
+#p3 .p3-love-letter > p:nth-child(8),
+#p3 .p3-love-letter > p:nth-child(13) {
+    text-align: center !important;
+    border: 1px solid #ffb3d966 !important;
+    border-left: 1px solid #ffb3d966 !important;
+    background: linear-gradient(135deg, #ff80ad22, #b28aff16) !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: clamp(18px, 3.5vw, 25px) !important;
+    font-style: italic !important;
+    color: #ffe0eb !important;
+}
+
+/* Signature */
+#p3 .p3-love-letter > p:last-child {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Existing button */
+#p3 .action-btn {
+    flex-shrink: 0;
+    border: 1px solid #ffc6db77;
+    box-shadow: 0 8px 24px #ff78a822;
+}
+
+/* Entrance animation */
+@keyframes p3CardRise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    #p3 .scrollable-body {
+        padding: 5px 2px 20px;
+        gap: 11px !important;
+    }
+
+    #p3 .p3-love-letter {
+        gap: 11px;
+    }
+
+    #p3 .p3-love-letter > p {
+        padding: 17px 15px !important;
+        border-radius: 16px !important;
+        font-size: 14px !important;
+        line-height: 1.9 !important;
+    }
+
+    #p3 .p3-love-letter > p:nth-child(5n+3) {
+        font-size: 20px !important;
+    }
+
+    #p3 .p3-love-letter > p:nth-child(5n) {
+        font-size: 22px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #p3 .p3-love-letter > p {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* Extra photo and video memories */
+#p5 .gallery-grid {
+    align-items: start;
+}
+
+#p5 .polaroid-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#p5 .polaroid-card:hover {
+    transform: rotate(0deg) translateY(-5px) scale(1.025);
+    box-shadow: 0 14px 30px rgba(255, 143, 177, 0.22);
+}
+
+#p5 .video-memories-section {
+    width: 100%;
+    margin: 28px 0 12px;
+}
+
+#p5 .video-memories-section > .script-title {
+    text-align: center;
+    margin-bottom: 6px;
+    color: var(--primary-dark);
+}
+
+#p5 .video-section-subtitle {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+#p5 .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+#p5 .memory-video-card {
+    min-width: 0;
+    padding: 9px;
+    border: 1px solid rgba(255, 143, 177, 0.28);
+    border-radius: 17px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 228, 238, 0.65)
+    );
+    box-shadow: 0 7px 20px rgba(110, 45, 78, 0.10);
+    overflow: hidden;
+}
+
+#p5 .memory-video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 11px;
+    background: #241322;
+}
+
+#p5 .memory-video-card p {
+    margin: 10px 2px 3px;
+    color: var(--primary-dark);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 380px) {
+    #p5 .video-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+    }
+
+    #p5 .memory-video-card video {
+        aspect-ratio: 16 / 10;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -564,9 +889,9 @@
     <div class="audio-gate-screen" id="audioScreenShield">
         <div class="audio-gate-card">
             <i class="fa-solid fa-heart-pulse gate-pulse-heart"></i>
-            <h2 style="font-size: 1.6rem; color: var(--text-dark); margin-bottom: 8px;">For Prakriti ❤️</h2>
+            <h2 style="font-size: 1.6rem; color: var(--text-dark); margin-bottom: 8px;">For mero Gundi keti❤️</h2>
             <p style="text-align: center; font-size: 0.92rem; color: var(--text-muted); margin-bottom: 25px;">
-                I have built a beautiful world here for our 5 Months milestone. Turn up your volume.
+                I have built a beautiful world here for our 9 Months milestone.. Turn up your volume sana..
             </p>
             <button class="action-btn" onclick="vibrateDevice(); liftAudioShieldCoverGate()" style="width: 100%;">
                 Tap to Start Experience ❤️
@@ -589,11 +914,10 @@
             <h1 class="script-title">Pankaj ❤️ Prakriti</h1>
             
             <div class="cover-frame">
-                <img src="img4.jpg" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\"fa-solid fa-heart\" style=\"font-size:3rem; color:var(--primary);\"></i>'">
+                <img src="img4.jpg" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=&quot;fa-solid fa-heart&quot; style=&quot;font-size:3rem; color:var(--primary);&quot;></i>';">
             </div>
-
             <div>
-                <span class="subtitle">Happy 5 Months Anniversary, Baby ❤️</span>
+                <span class="subtitle">Happy 9 Months Anniversary, puntuu ❤️</span>
             </div>
             
             <div class="scrollable-body">
@@ -620,7 +944,7 @@
             
             <h2 class="script-title" style="font-size: 2.3rem;">Our Time Together</h2>
             <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">
-                Every second with you counts, Prakriti.
+                Every second with you counts, Puntuu.
             </p>
             
             <div class="scrollable-body">
@@ -652,7 +976,7 @@
                     <i class="fa-solid fa-hourglass-high" style="color: var(--primary); font-size: 1.2rem; margin-bottom: 6px; animation: heartPulse 2s infinite alternate;"></i>
                     <h4 style="font-size: 0.9rem; color: var(--text-dark); margin-bottom: 3px;">Memories Every Second</h4>
                     <p style="font-size: 0.82rem; text-align: center; color: var(--text-muted); line-height: 1.4;">
-                        Time flies when I'm talking to my favorite person. Five beautiful months down, a lifetime of memories left to collect.
+                        Time flies when I'm talking to my favorite person. Nine beautiful months down, a lifetime of memories left to collect.
                     </p>
                 </div>
                 <div class="heart-video">
@@ -675,17 +999,92 @@
             <span class="subtitle">To My Favorite Person ❤️</span>
             
             <div class="scrollable-body">
-                <div style="text-align: left; font-size: 0.9rem; line-height: 1.65; color: #3d3a45;">
-                    <p style="margin-bottom: 10px;">Happy 5 Months Anniversary, Baby🥹😘.</p>
-                    <p style="margin-bottom: 10px;">Sometimes it feels like we just started talking yesterday, yet I can't imagine my life without you anymore.</p>
-                    <p style="margin-bottom: 10px;">These past five months have given me countless memories that I will always treasure. Every call, every text, every laugh, every smile, every late-night conversation, and every little moment with you has become special to me.</p>
-                    <p style="margin-bottom: 10px;">You know I overthink a lot. Sometimes I worry too much, sometimes I get scared, and sometimes I get emotional. But behind all those feelings is one simple truth: I care about you more than words can explain.</p>
-                    <p style="margin-bottom: 10px; font-style: italic; border-left: 2px solid var(--primary); padding-left: 8px; color: #5c5470;">I know I'm not perfect, and I overthink, but I'm trying every day because I don't want to lose you.</p>
-                    <p style="margin-bottom: 10px;">Thank you for staying in my life. Thank you for listening to me, supporting me, making me smile, and becoming my safe place.</p>
-                    <p style="margin-bottom: 10px;">You are not just my girlfriend. You are someone who has become a very important part of my everyday life.</p>
-                    <p style="margin-bottom: 10px;">Prakriti, mero puntu, mero bebuuuu, mero gendi, mero kukurni, sungurni, badarni, chudel, mero maya, mero cutiee, mero princess, mero queen, literally my everything... 🫶🥹💘 Thank you for every beautiful memory we have created together.</p>
-                    <p style="margin-bottom: 10px;">No matter what happens in life, these five months will always remain one of the most beautiful chapters of my life.</p>
-                    <p style="font-weight: 600; color: var(--primary-dark);">Happy 5 Months Anniversary, Love. I love you more than you can imagine. ❤️</p>
+                <div class="p3-love-letter">
+                    <p style="margin-bottom: 10px;">Bebeee first of all,, good morningggg mero maya 😚❤️ Ani happy 9 months to usss... Tbh hijo rati 12 baje samma timisanga kura garxu, ani exactly 12 baje hamro anniversary ko msg pathauxu vanera socheko the maile... 😂🥹 Tara k garnu, timi sutihaleu ani ma pani kaile sutexu tha nai payena😭🤣 Ani aba mero dramatic anniversary message ko entry chai morning ma hudai xa hai bebe. Hijo ko plan ta fail vayo, tara timilai maya garne mero man chahi kahile pani fail hudaina ni hauu mero mutu😚💗</p>
+                    <p style="margin-bottom: 10px;">Bebe, 9 months... NINE WHOLE MONTHS. 🥹💘 Kahile kahi yo kura sochda nai ajib lagxa malai. Magh 1 gate ko tyo din dekhi aaja samma kati dherai kura change vaisakyo mero life ma. Tyo bela hami dui jana matra thyou... afno afno life ma busy ani euta sano message le hamro kahai ko suruwaat garyo... Ani hera na aaja tei sano message bata suru vako kura  mero life ko yeti thulo part banisakyo..  Kasto strange xa hai bebe puntuu kahile kahi life ko sabai vanda beautiful kura haru ekdam sano moment bata suru hudo raixa.... ❤️‍🩹</p>
+                    <p style="margin-bottom: 10px;">And timlai tha xa maile kahile socheko thena ki euta manxe mero lagi yeti special hunxa vanera.... Like kasari euta manxe ko naam screen ma dekhda mukh ma smile aauxa, usko voice sundai mood ramro hunxa, usko barema sochda afai blush aauxa 😭💗 Kasari euta manxe mero din ko random thoughts dekhi rati sutne bela samma ko part banna sakxa? I genuinely dont know bebe tara timi mero life ma aayepaxi yo sabai kura normal vaisakyo.... Aba ta kei ramro hunxa vane sabai vanda pahila timilai vannu man lagxa, kei naramro hunxa vane pani timisanga share garna man lagxa. Sometimes ta reason nai hudaina, bas timisanga kura garna man lagxa.... Ani tei nai ta ho ni maya vaneko I think haina ra sani? 🥹❤️</p>
+                    <p style="margin-bottom: 10px; font-style: italic; border-left: 2px solid var(--primary); padding-left: 8px; color: #5c5470;">Nine months ago you were someone I wanted to know Today you are someone I cant imagine my story without 😚💞</p>
+                    <p style="margin-bottom: 10px;">Bebe, yo 9 months ma timi mero lagi kati dherai kura banisakyou vanera explain garna gahro nai xa. Timi mero gf matra hainau timi mero best friend hau, mero favourite person hau, mero random bakbak sunne manxe hau, mero mood ramro banaune manxe hau, ani kahile kahi mero dimag kharab garne manxe pani hau 😂😭❤️ Timi nai mero favourite notification, timi nai mero favourite voice, timi nai mero favourite face, ani timi nai mero favourite headache.... Kasto unfair ho hai, euta manxe le yeti dherai role kasari play garna sakxa? 🤨😂💗</p>
+                    <p style="margin-bottom: 10px;">Tara jokes aside bebe, I really love the place you have msde for yourself in my life... Timisanga maile aafulai lukayera basnu pardaina... Ma childish huna sakxu, faltu kura garna sakxu, ekdam emotional huna sakxu, pagal jasto hasna sakxu, ani kahile kahi overthink garera afai afno dimag khana sakxu, bachha jastai jiddi garna sakxu, kahile 20 kissies ko lagi ta kahilei mero pom pom ko lagi...., Kahile na risako bela ni risaidinxu maya paula vanera... 😭😂 And I love that hamro bich ma yesto space xa jaha we can be ourselves... I hope timile pani mero saath ma tei comfort feel garxau, jaha timilai harek kura perfect tarikale express garnu pardaina, jaha timi sad huda sad huna sakxau, risako bela risako kura vannu sakxau, khusi huda bachha jastai ramna sakxau ra moody vako bela ni tyo ke sochla vanera sochnu pardaina... Malai khasai interest xaina testo kurama, but if timi mood ma xau vane ma sanga dirty kura garda hunxa, ma judge pani gardaina, ani I wont sit shaking..😆🌚  I want you to feel loved not because you are always happy, always cute, or always easy to understand, but simply co you are YOU , mero pukuli 🥹❤️</p>
+                    <p style="margin-bottom: 10px;">
+                    Ani sachi, timro barema lekhna basda maile kati choti eutai kura repeat garxu hola hai? 😂😭 Harek aniversary ma timilai kati maya garxu, timi kati special xau, timi mero lagi kati important xau vanera vanirako hunxu... Tara k garnu bebe, mero mann ma timro lagi yeti dherai kura xa ki naya words khojna jada pani feri tei feelings haru aauxan. Maybe words change holan, messages lamo hudai jala, (kei kei ta already lamo xa... : ) emojis ko sankhya badhdai jala 😂💗, tara tyo sabda paxadiko feeling chai mero lagi ajhai pani tei xa. Ani sachai , I hope timile mero words matra haina, mero little efforts haru bata pani tyo feel garna sakxau..... Aba malai tha xa NAiii vanne ho kukurrr..❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">Sometimes ma hamro old conversations samjhira hunxu. Hamro suru suru ko kura haru, ek arka lai bujhna khojeko, sano sano kura ma haseka palharu, random teasing, timilai manauna khojeko, timile malai manauna khojeko, ani tyo moments jaba hami kura gardai gardai time nai birsinthyou... bihana 6 baje samma... Tyo ta ati thyo hai, almost talked 9 hours in call continuously yrr... Kati kura haru ta teti bela normal lagthyo hola... tara aile farkera sochda they have become memories I genuinely want to keep forever... Tyo bela hami lai thaha thiyena hola ki yo sano sano moments haru ek din hamro rltko beautiful part banne xan vani... 🥹💞</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">Ani sabai kura ramro matra pani ta thiyena ni hai bebe.... Kahile kahi misunderstanding vayo, kahile euta sano kura le mann dukhyo, kahile ek arka ko feelings bujhna garo vayo, kahile ris le garda ramrari bolna sakenam. Hami duitai perfect xainau, ani hamro rlt pani perfect xaina.... But maile yo 9 months ma bujheko euta kura chai, maya vaneko harek kura ma agree garnu matra haina raixa.... Maya vaneko kahile kahi afno kura explain garnu, arko msnxe ko kura sunna siknu, afno galti accept garnu, ek arka lai chiknu (Siknu)** (typing mistake) 🥲🤣ani ek arka lai hurt nagari problem solve garna try garnu pani raixa....❤️‍🩹🥹💞</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">Ma chahanna ki hami kahile pani jhagada nagarau.... Honestly, tyo ta impossible nai hola, especially timi jasto sano sano kura ma risayera basne mero sano chudel sanga... And ma jasto girlfriend's boy, nakhra dekhaune manxe vayesi jhagada ta ofcourse vaihalxa...😭😂❤️ Tara I want ki jhagada vako bela pani hami le ek arka ko value na birsiyau. Ris uthda or kei aru uthda pani respect nagumaau, hurt vako bela pani ek arka lai bujhna try garau, ani afno ego vanda hamro understanding lai important banauna sakau. coz bebe, mero lagi rlt...ko beauty perfect hunu ma haina, imperfect moments ma pani ek arka lai ramrari treat garna siknu ( AHile chahi typing mistake vayena la) ma xa.;; I want us to grow not just stay together.... I want us to understand each other better with every passing month darling.. 😚❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    And no, mero sano puntuu ma timilai har kura ma jitauna khojera asfu sadhai harna man xa vaneko chai haina hai.... 😂🤨 Kahile kahi ta ma pani right hunxu hola ni, Your Highness! 😭🤣  Maharani jii, jahile hjr sahi hunuhunxa vanne hunxa ra...Tara timisanga arguement jitera pani timro mann dukhyo vane tyo victory ko k kaam, vana ta? I would rather want ki we both understand what went wrong and find a way forward... Its never supposed to be you against me, bebe. It' supposed to be both of us trying to understand each other. ...🫂❤️ AHile yati vanda pani utheko bela aafai birsinxu yi kura yrr..</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Ani aba ali romantic kura garam hai, natra timilai feri lecture jasto feel hunxa.... 😭😂💋</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Mero bebe, timilai vetna paune harek chance mero lagi special xa.... especially last kei meetings haru..🤣 . Timro face herna paunu, timro aakha ma herna paunu, timro haat samatna paunu, aru ni dherai kura samatna paunu... , timilai hug garna paunu... these are the kinds of things that make me realise how lucky I am to have you in my life.... Tyo hug garda ko feeling ta k vanam ma bebe.... ekxin ko lagi sabai kura side ma rakhera basna man lagxa.... Timilai najik rakhera timro presence feel garera, ali ber duniya ko tension birsina man lagxa sanuu... 🥹❤️... Sachi yrr mero bebe ko man kati soft ani cutee xa😋😚...</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Ani timro tyo smileeeee.... Uff mero jaan timilai hasdai gareko herda malai kasto khusi lagxa vanera timilai tha pani xaina hola.... Except in bed, tya royeko dekhda maja aauxa... Sorry but its true... 😭💗 Timro random expressions, timro nakhra, timro bachha jasto behaviour, timro risako face, timro bolne tarika, timro tyo cute aawaj... sabai kura ko afnai place xa mero mann ma. Kahile kahi ta timi kei nagari basda pani timilai herera basna man lagxa.... Ani timile “k hereko?” vanera sodhyou vane chai ma innocent face banauxu...🤭😂❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Chamkila tara jhai timra aakha,
+                    Mero din ujyaalo banaune timro face
+                    Sunda surilo lagne timra vakha
+                    Ani mero mann chorera lageko timro bhesh.... 😭😂💞</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Majak aside mero beautiful princess, I hope you never feel like you have to compete for your place in my heart.... Timro place timrai ho bebe. Timi jasto xau, timro afnai personality xa, afnai dreams xan, afnai thoughts xan, ani ma timilai tyo sabai kura sanga maya garna chahanxu..... Ma timilai mero imagination ko perfect person banauna khojdina.... I want to know the real you, the person you are today and the person you will become in the coming years.... ❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Thank you,....................mero sani. Thank you for these nine months.( Kasto 9 months sunda khusi lagdai xa ke, coz paxi yo 9 mahina vanda alag khusi hunexa) 🥹💗
+                    Thank you mero life ma aauna ko lagi.
+                    Thank you for every memory, every laugh, every hug, every kiss, every little moment that became OURS.... ❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Maybe timilai yo sabai sano sano kura jasto lagla, tara bebe, mero lagi these are the things that make a rlt beautiful.... Thulo gifts matra haina, daily life ko tyo little care, ek arka ko barema sochnu, random kura share garnu, ani busy din ma pani ek arka ko lagi sano space banaunu... malai ta yestai kura haru precious lagxa. I hope ma pani timro life ma yestai happiness add garna sakum, jasto timile mero life ma gareki xau sanii... 🥹💞 I dont want expensive gifts, I just only want 2 priceless gifts, 2 ta sano sano gifts pugyo malai, baki timi aafai ma ek precious gift xadai xau darling...</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Ani bebe, I know life sadhai hamile soche jasto hudaina.... Aaune din haru ma padhai badhla, responsibilities badhlan, busy hune din haru aaulan, kahile circumstances le time dina garo parla.... Ma future ko harek kura predict garna sakdina, ani timilai na huna sakne faltu promises pani garna chahanna.... Tara ma euta kura chai promise garna chahanxu ki ma hamro rlt lai care garna, timisanga honestly communicate garna, afno galti bata sikna, ani hamilai better banauna effort garirahane xu.  always and forever... Although ma ma change na dekhiye pani, wa mero efforts sano vaye pani bebe just know Ki I am trying my best sanu...❤️‍🩹</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    I want us to have a rlt jaha maya feel garna special day nai parkhinu naparos..... Random Tuesday ko din pani timile afulai loved feel garna sakau.... Busy day ma pani euta sano message le “I'm thinking of you” vanne feel garaos. Misunderstanding paxi hami le ek arka ko mann bujhna time diu.... Ani khusi huda chai bina reason nai ek arka sanga share garna man lagos.... I want our love to be something we build through little actions, not just beautiful words.... 🫶🏻❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    AAni future ko kura garda, bebe, maile timisanga ajhai dherai kura experience garnu xa... Garna ta ke baki xa ra aba, laaj mana kukurrr... 😭💗 Ajhai dherai dates ma janu xa, ajhai dherai photos khichnu xa, ajhai dherai random walks garnu xa (ekchoti matra aaja samam vkk)  ajhai dherai memories banaunu xa, timro barema ajhai dherai jannu xa. Timro childhood ko stories, timra dreams, timilai sabai vanda khusi banaune kura haru, timilai dar lagne kura haru, timro mind ma randomly aaune thoughts haru... I want to keep discovering all these little parts of you.... Every little part discover gari sake vannu parda ta🌚</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Ajhai timro birthday celebrate garnu xa, ajhai anniversaries aaune xan ajhai kati choti timilai surprise dinu xa, ajhai kati choti timro haat samatera hidnu xa, ajhai kati choti timilai hug garera “I missed you” vannu xa. Ani of course, ajhai kati choti timro nakhra sahanu xa, timro faltu kura ma hasnu xa, timisanga faltu kura ma jhagada garnu xa, ani feri “aau na mero bebe” vandai manaunu xa.... 😭😂❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Varkhar ta 9 months vayo yrrr, ajhai ta kati dherai chapters baki xan hamro story ma.... 🥹💖 Ma chahanxu ki time sangai hami ali mature banam, ek arka lai ali ramrari bujham, ani ek arka ko life ma ramro influence banau.... Hami duitai afno dreams chase garau, afno future build garau, ani tyo journey ma ek arka lai support garna sakau... Timi afno life ma grow gareko herna malai khusi lagos, ani mero growth herera timilai pani proud feel hos.... Because I don't just want to love you today bebe... I want to keep learning how to love you better as we both grow. ...❤️‍🩹</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    And one day dhersi years psxi , maybe hami yo message feri padhera hasne xau...😂😭 Timile “kasto lamo lamo essay lekhthyo yo manxe, kasto lamoo thyo, mero ta aakhama aasu aauthyo ” vanxau hola, msg padhera khusiko aau vaneko hai kukur..., 🤭💗 Maybe teti bela hamro life ekdam different vaisakxa... hamile aile imagine gareko vanda dherai kura experience garisakeka hunxau. But I hope tyo bela pani hami yo suruwaat samjhera smile garna sakau... Magh 1 gate, tyo first message, hamro first meeting, hamro first hug, ani yo sabai sano sano moments jasle hamilai aaja ko hami banayo.... 🥹❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Bebe I cant promise that every day ahead will be easy.... I can't promise well never misunderstand each other or never have difficult moments.... But I can promise that I want to keep trying, keep listening, keep learning.. I want us to have the kind of love where we can be honest without being afraid, where we can say sorry without ego, where we can talk through things instead of hurting each other, and where both of us feel valued.... You deserve that kind of love, sani. We both do... ❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Ani timilai euta kura feri vannu xa mero maya..
+                    Timi mero lagi important xau
+                    Timro feelings important xan
+                    Timro happiness important xa
+                    Timra dreams important xan
+                    Timro peace important xa
+                    Not because you are my gf but The person I met, the person I slowly got to know, the person who became such a beautiful part of my life.... I love you for all those little things that make you Prakriti Aryal, mero bebe.... 🥹💞</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    So, happy 9 months to us mero maya. ❤️♾️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Happy 9 months to my little chudel
+                    Happy 9 months to my bebe, my sani, my puntuu.
+                    Happy 9 months to US.... 🫂❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Nine months down, and so many chapters still waiting for us. 🥹💖
+
+                    Hijo midnight ma pathauna napaye pani, yo message ko harek word maile timrai lagi lekheko ho bebe.... Maybe ma timilai yo sabai kura harek din vanirako hudina, maybe kahile kahi mero behaviour le mero feelings ramrari express gardaina hola, tara I hope you never have to guess whether you matter to me.... I want to keep showing you, in the little ways I can, that you do matterr..❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Timile soche vanda badhi maya garxu sani. Kahile kahi mero words le sabai explain garna nasakla, tara mero mann ma timro lagi vako maya chai words vanda dherai thulo xa.... Ani ma chahanxuu ki mero maya timile mero messages ma matra haina, mero time ma, mero care ma, mero efforts ma, ani maile timilai kasari treat garxu tesma pani feel garna sakau.... 🥹❤️</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                    Pahilo maya na vaye mero antim hunu hai bebe.... 🥺💞
+Mero aaja ma timi xau
+Mero aune din haru ma pani timilai sametne sapana xa
+Ani yo 9 months ko beautiful story lai ajhai dherai ramra chapters haru le varna man xa.,...
+</p>
+                    <p style="font-weight: 600; color: var(--primary-dark);">
+                   I love you, mero beautiful princess, mero queen, mero baby, mero bachha, mero darling, mero cutiee, mero puntuu, mero sani, mero gendo, mero kukurni, mero sugurni, mero jindagi ko sabai vanda pyaro manxee.... 😭😂💋💗</p>
+                     <p style="font-weight: 600; color: var(--primary-dark);">
+                    Varkhar ta 9 mahina vayo hai bebe, ajhai ta purai lifetime ko sapana xa....🤭❤️♾️</p>
+                     <p style="font-weight: 600; color: var(--primary-dark);">
+                    I love you so, so much. Aaja, bholi, parsi, ani harek aune din ma... 🥹💞</p>
+                     <p style="font-weight: 600; color: var(--primary-dark);">
+                    Forever mero bebe. Forever mero sani. Forever my favourite person. 🫂❤️♾️</p>
+                     <p style="font-weight: 600; color: var(--primary-dark);">
+                    And finally...
+                    
+                    FUCKKKKKKKKK YOUUUUUU, mero chudel. 🥱😘😂❤️</p>
+                    
                     <p style="text-align: right; font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: var(--primary-dark); margin-top: 5px;">— Yours, Pankaj</p>
                 </div>
             </div>
@@ -905,7 +1304,7 @@
 
         <div class="timeline-stop">
             <div class="stop-meta">❤️ Present</div>
-            <div class="stop-date">Month 5</div>
+            <div class="stop-date">Month 9</div>
             <div class="stop-title">Still My Favorite Person</div>
             <p style="font-size:0.85rem;">
                 And I still smile when I see your name.
@@ -966,6 +1365,70 @@
                         <div class="polaroid-caption">Happy Vibes</div>
                     </div>
 
+<!-- Extra Memory Photo 7 -->
+<div class="polaroid-card" style="--rot: -2deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img7.jpg', 'Sweet Memory', 'One more little memory with my favourite person.', '📍 Our Memories', '💭 Forever special')">
+    <div class="polaroid-img-box">
+        <img src="img7.jpg" alt="Sweet Memory" onerror="showImgErrorPlaceholder(this, 'fa-camera')">
+    </div>
+    <div class="polaroid-caption">Sweet Memory ♡</div>
+</div>
+
+<!-- Extra Memory Photo 8 -->
+<div class="polaroid-card" style="--rot: 3deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img8.jpg', 'Beautiful Day', 'A moment I wish I could relive with you.', '📍 Special Moment', '💭 My favourite girl')">
+    <div class="polaroid-img-box">
+        <img src="img8.jpg" alt="Beautiful Day" onerror="showImgErrorPlaceholder(this, 'fa-heart')">
+    </div>
+    <div class="polaroid-caption">Beautiful Day 💗</div>
+</div>
+
+<!-- Extra Memory Photo 9 -->
+<div class="polaroid-card" style="--rot: -3deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img9.jpg', 'Us Together', 'Another chapter in our little love story.', '📍 Us', '💭 My safe place')">
+    <div class="polaroid-img-box">
+        <img src="img9.jpg" alt="Us Together" onerror="showImgErrorPlaceholder(this, 'fa-heart')">
+    </div>
+    <div class="polaroid-caption">Just Us 🫶🏻</div>
+</div>
+
+<!-- Extra Memory Photo 10 -->
+<div class="polaroid-card" style="--rot: 2deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img10.jpg', 'Your Smile', 'Your smile makes ordinary moments unforgettable.', '📍 Favourite Moment', '💭 My happiness')">
+    <div class="polaroid-img-box">
+        <img src="img10.jpg" alt="Your Smile" onerror="showImgErrorPlaceholder(this, 'fa-face-smile')">
+    </div>
+    <div class="polaroid-caption">Your Smile 😚</div>
+</div>
+
+<!-- Extra Memory Photo 11 -->
+<div class="polaroid-card" style="--rot: -1deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img11.jpg', 'Little Things', 'Even the smallest moments mean so much with you.', '📍 Little Moments', '💭 My favourite memories')">
+    <div class="polaroid-img-box">
+        <img src="img11.jpg" alt="Little Things" onerror="showImgErrorPlaceholder(this, 'fa-star')">
+    </div>
+    <div class="polaroid-caption">Little Things ✨</div>
+</div>
+
+<!-- Extra Memory Photo 12 -->
+<div class="polaroid-card" style="--rot: 4deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img12.jpg', 'My Favourite Person', 'Every picture of you becomes a memory I treasure.', '📍 My Bebe', '💭 Always you')">
+    <div class="polaroid-img-box">
+        <img src="img12.jpg" alt="My Favourite Person" onerror="showImgErrorPlaceholder(this, 'fa-heart')">
+    </div>
+    <div class="polaroid-caption">My Bebe ❤️</div>
+</div>
+
+<!-- Extra Memory Photo 13 -->
+<div class="polaroid-card" style="--rot: -2deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img13.jpg', 'A Precious Moment', 'A little memory that will always stay in my heart.', '📍 Our Story', '💭 Priceless')">
+    <div class="polaroid-img-box">
+        <img src="img13.jpg" alt="A Precious Moment" onerror="showImgErrorPlaceholder(this, 'fa-camera-retro')">
+    </div>
+    <div class="polaroid-caption">Priceless 💞</div>
+</div>
+
+<!-- Extra Memory Photo 14 -->
+<div class="polaroid-card" style="--rot: 3deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img14.jpg', 'More Chapters', 'Here is to all the beautiful memories still waiting for us.', '📍 Our Future', '💭 Forever and always')">
+    <div class="polaroid-img-box">
+        <img src="img14.jpg" alt="More Chapters" onerror="showImgErrorPlaceholder(this, 'fa-infinity')">
+    </div>
+    <div class="polaroid-caption">More Chapters ♾️</div>
+</div>
+
                     <div class="polaroid-card" style="--rot: 4deg;" onclick="vibrateDevice(); triggerPolaroidEnlargedJournalContext('img6.jpg', 'Pure Contentment', 'Looking forward to building hundreds of more chapters together.', '📍 Future Sight', '💭 Forever Attachment')">
                         <div class="polaroid-img-box">
                             <img src="img6.jpg" alt="Pure Contentment" onerror="showImgErrorPlaceholder(this, 'fa-infinity')">
@@ -974,6 +1437,82 @@
                     </div>
 
                 </div>
+                
+<div class="video-memories-section">
+    <h3 class="script-title">Our Little Movies 🎬</h3>
+    <p class="video-section-subtitle">
+        Little moments, forever memories ♡
+    </p>
+
+    <div class="video-gallery">
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>Our First Little Clip 💗</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>Your Cute Moments 😚</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video3.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>My Favourite Memory 🥹</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video4.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>Random Happiness ✨</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video5.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>A Moment With You 🫶🏻</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video6.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>My Bebe Being My Bebe 😂❤️</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video7.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>One To Remember 💞</p>
+        </div>
+
+        <div class="memory-video-card">
+            <video controls preload="metadata" playsinline>
+                <source src="video8.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>Our Story Continues ♾️</p>
+        </div>
+
+    </div>
+</div>
+
             </div>
 
             <button class="action-btn" onclick="vibrateDevice(); openWebsitePage('p6')" style="background: var(--text-dark);">
@@ -1289,7 +1828,7 @@ slowly, like a story meant only for you.
 }
 
         // Final Climax Typewriter Pipeline Mechanics
-        const continuousClimaxLetterString = "If I have to choose again, I’ll still choose you without a second thought. These five months are just the beginning of our beautiful story. Thank you for being you, Prakriti. I promise to stand by you, care for you, and love you more with each passing second. Happy 5 Months, my beautiful girl. ❤️";
+        const continuousClimaxLetterString = "If I have to choose again, I’ll still choose you without a second thought. These nine months are just the beginning of our beautiful story. Thank you for being you, Prakriti. I promise to stand by you, care for you, and love you more with each passing second. Happy 9 Months, my beautiful girl. Waiting to celebrate more and more..❤️";
         
         function executeLoveLetterTypewriterEffect() {
             typewriterExecuted = true;
